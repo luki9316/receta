@@ -30,3 +30,7 @@
 #
 # For more information: http://github.com/modeset/teaspoon
 #= require angular-mocks/angular-mocks
+
+beforeEach ->
+  this.addMatchers
+    toEqualData: (expected)-> return angular.equals(this.actual, expected)
